@@ -1,0 +1,53 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/logos/UNCUTstash_Logo_120.png" />
+  <link rel="apple-touch-icon" href="/logos/UNCUTstash_Logo_120.png" />
+  <link rel="datacartel_logo" href="/logos/datacartel-logo.png" />
+  <link rel="UNCUTstash_logo" href="/logos/UNCUTstash_Logo_512.png" />
+  <link rel="UNCUTstash_icon" href="/logos/UNCUTstash_icon_120.png" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- SOVEREIGN ZERO-TRUST DIODE CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; 
+              script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; 
+              style-src 'self' 'unsafe-inline';
+              connect-src 'self' ws://localhost:* wss://localhost:* https://corsproxy.io; 
+              worker-src 'self' blob:;">
+
+  <!-- CRITICAL FIX: Updated to modern PWA standard to clear console warnings -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- CRITICAL FIX: Removed JS backticks and line breaks for proper browser tab rendering -->
+  <title>UNCUTstash AI | by DATAcartel Collective | Take Back Control of Your Data</title>
+
+  <style>
+    /* Embedded style block to eliminate flashing during cold boots on device screen */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
+      color: #ffffff;
+      font-family: monospace;
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
